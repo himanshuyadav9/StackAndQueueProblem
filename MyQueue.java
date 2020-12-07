@@ -20,6 +20,10 @@ public class MyQueue {
 		myLinkList.printMyNodes();
 	}
 	
+	public INode deQueue() {
+		return myLinkList.pop();
+	}
+	
 	public static void main(String[] args) {
 		System.out.println("Welcome to Queue Problem");
 		MyQueue myQueue = new MyQueue();
@@ -32,7 +36,12 @@ public class MyQueue {
 		myQueue.printQueue();
 		myQueue.enqueu(myThirdNode);
 		myQueue.printQueue();
-
+       
+		myQueue.deQueue();
+		myQueue.printQueue();
+		myQueue.deQueue();
+		myQueue.printQueue();
+		myQueue.deQueue();
 	}
 
 }
