@@ -20,6 +20,14 @@ public class MyStack {
 	public void printStack() {
 		myLinkList.printMyNodes();
 	}
+	
+	public INode peak() {
+		return myLinkList.head;
+	}
+
+	public INode pop() {
+		return myLinkList.pop();
+	}
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to Stack Problem");
@@ -31,6 +39,12 @@ public class MyStack {
 		myStack.push(mySecondNode);
 		myStack.push(myThirdNode);
 		myStack.printStack();
+		myStack.peak();
+		while (myStack.peak().getNext() != null) {
+			myStack.pop();
+			System.out.println("head after pop-" + myStack.peak().getKey());
+			myStack.printStack();
+		}
 	}
 }
 
